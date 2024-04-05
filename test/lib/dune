@@ -1,0 +1,8 @@
+(library
+ (name Stakeout)
+ (wrapped false)
+ (public_name Stakeout)
+ (modules TestInfra )
+ (libraries base cmdliner bigraph alcotest Heist)
+ (preprocess (pps ppx_deriving_yojson))
+ )

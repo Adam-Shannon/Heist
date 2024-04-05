@@ -1,0 +1,7 @@
+(tests
+ (names  RulesAndApplication StrategyApplication)
+ (modules  RulesAndApplication StrategyApplication)
+ (libraries base cmdliner bigraph alcotest Heist Stakeout)
+ (deps (glob_files_rec Bigraphfiles/*))
+)
+

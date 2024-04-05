@@ -1,0 +1,75 @@
+{
+  "brs_name": "tryOpen",
+  "brs_lhs": {
+    "place_graph": {
+      "num_regions": 1,
+      "num_nodes": 2,
+      "num_sites": 0,
+      "rn": {
+        "r": 1,
+        "c": 2,
+        "r_major": [ [ 0, [ 0 ] ] ],
+        "c_major": [ [ 0, [ 0 ] ] ]
+      },
+      "rs": { "r": 1, "c": 0, "r_major": [], "c_major": [] },
+      "nn": {
+        "r": 2,
+        "c": 2,
+        "r_major": [ [ 0, [ 1 ] ] ],
+        "c_major": [ [ 1, [ 0 ] ] ]
+      },
+      "ns": { "r": 2, "c": 0, "r_major": [], "c_major": [] },
+      "trans": null
+    },
+    "link_graph": [],
+    "nodes": {
+      "ctrl": [
+        [ 0, { "ctrl_name": "Vault", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 1, { "ctrl_name": "Closed", "ctrl_params": [], "ctrl_arity": 0 } ]
+      ],
+      "sort": [ [ "Closed", [ 1 ] ], [ "Vault", [ 0 ] ] ],
+      "size": 2
+    }
+  },
+  "brs_rhs": {
+    "place_graph": {
+      "num_regions": 1,
+      "num_nodes": 5,
+      "num_sites": 0,
+      "rn": {
+        "r": 1,
+        "c": 5,
+        "r_major": [ [ 0, [ 0 ] ] ],
+        "c_major": [ [ 0, [ 0 ] ] ]
+      },
+      "rs": { "r": 1, "c": 0, "r_major": [], "c_major": [] },
+      "nn": {
+        "r": 5,
+        "c": 5,
+        "r_major": [ [ 0, [ 4, 3, 2, 1 ] ] ],
+        "c_major": [ [ 1, [ 0 ] ], [ 2, [ 0 ] ], [ 3, [ 0 ] ], [ 4, [ 0 ] ] ]
+      },
+      "ns": { "r": 5, "c": 0, "r_major": [], "c_major": [] },
+      "trans": null
+    },
+    "link_graph": [],
+    "nodes": {
+      "ctrl": [
+        [ 0, { "ctrl_name": "Vault", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 1, { "ctrl_name": "Closed", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 2, { "ctrl_name": "Login", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 3, { "ctrl_name": "LoginT", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 4, { "ctrl_name": "LoginT", "ctrl_params": [], "ctrl_arity": 0 } ]
+      ],
+      "sort": [
+        [ "Closed", [ 1 ] ],
+        [ "Login", [ 2 ] ],
+        [ "LoginT", [ 4, 3 ] ],
+        [ "Vault", [ 0 ] ]
+      ],
+      "size": 5
+    }
+  },
+  "brs_eta": null,
+  "conds": []
+}

@@ -1,0 +1,17 @@
+(executable
+ (public_name Heist)
+ (promote
+  (until-clean)
+  (into ../))
+ (name heist)
+ (package Heist)
+ (libraries base cmdliner bigraph menhirLib yojson Heist)
+ (preprocess
+  (pps ppx_inline_test))
+  )
+
+(menhir
+  (modules parser)
+)
+
+(ocamllex lexer)

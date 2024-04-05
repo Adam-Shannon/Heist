@@ -1,0 +1,73 @@
+{
+  "brs_name": "failed",
+  "brs_lhs": {
+    "place_graph": {
+      "num_regions": 1,
+      "num_nodes": 3,
+      "num_sites": 1,
+      "rn": {
+        "r": 1,
+        "c": 3,
+        "r_major": [ [ 0, [ 0 ] ] ],
+        "c_major": [ [ 0, [ 0 ] ] ]
+      },
+      "rs": { "r": 1, "c": 1, "r_major": [], "c_major": [] },
+      "nn": {
+        "r": 3,
+        "c": 3,
+        "r_major": [ [ 0, [ 2, 1 ] ] ],
+        "c_major": [ [ 1, [ 0 ] ], [ 2, [ 0 ] ] ]
+      },
+      "ns": {
+        "r": 3,
+        "c": 1,
+        "r_major": [ [ 0, [ 0 ] ] ],
+        "c_major": [ [ 0, [ 0 ] ] ]
+      },
+      "trans": null
+    },
+    "link_graph": [],
+    "nodes": {
+      "ctrl": [
+        [ 0, { "ctrl_name": "Vault", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 1, { "ctrl_name": "Closed", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 2, { "ctrl_name": "Login", "ctrl_params": [], "ctrl_arity": 0 } ]
+      ],
+      "sort": [ [ "Closed", [ 1 ] ], [ "Login", [ 2 ] ], [ "Vault", [ 0 ] ] ],
+      "size": 3
+    }
+  },
+  "brs_rhs": {
+    "place_graph": {
+      "num_regions": 1,
+      "num_nodes": 2,
+      "num_sites": 0,
+      "rn": {
+        "r": 1,
+        "c": 2,
+        "r_major": [ [ 0, [ 0 ] ] ],
+        "c_major": [ [ 0, [ 0 ] ] ]
+      },
+      "rs": { "r": 1, "c": 0, "r_major": [], "c_major": [] },
+      "nn": {
+        "r": 2,
+        "c": 2,
+        "r_major": [ [ 0, [ 1 ] ] ],
+        "c_major": [ [ 1, [ 0 ] ] ]
+      },
+      "ns": { "r": 2, "c": 0, "r_major": [], "c_major": [] },
+      "trans": null
+    },
+    "link_graph": [],
+    "nodes": {
+      "ctrl": [
+        [ 0, { "ctrl_name": "Vault", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 1, { "ctrl_name": "Closed", "ctrl_params": [], "ctrl_arity": 0 } ]
+      ],
+      "sort": [ [ "Closed", [ 1 ] ], [ "Vault", [ 0 ] ] ],
+      "size": 2
+    }
+  },
+  "brs_eta": [],
+  "conds": []
+}
