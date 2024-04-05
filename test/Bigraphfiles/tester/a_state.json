@@ -1,0 +1,25 @@
+{
+  "place_graph": {
+    "num_regions": 1,
+    "num_nodes": 1,
+    "num_sites": 0,
+    "rn": {
+      "r": 1,
+      "c": 1,
+      "r_major": [ [ 0, [ 0 ] ] ],
+      "c_major": [ [ 0, [ 0 ] ] ]
+    },
+    "rs": { "r": 1, "c": 0, "r_major": [], "c_major": [] },
+    "nn": { "r": 1, "c": 1, "r_major": [], "c_major": [] },
+    "ns": { "r": 1, "c": 0, "r_major": [], "c_major": [] },
+    "trans": null
+  },
+  "link_graph": [],
+  "nodes": {
+    "ctrl": [
+      [ 0, { "ctrl_name": "A", "ctrl_params": [], "ctrl_arity": 0 } ]
+    ],
+    "sort": [ [ "A", [ 0 ] ] ],
+    "size": 1
+  }
+}

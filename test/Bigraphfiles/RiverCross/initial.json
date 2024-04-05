@@ -1,0 +1,52 @@
+{
+  "place_graph": {
+    "num_regions": 2,
+    "num_nodes": 8,
+    "num_sites": 0,
+    "rn": {
+      "r": 2,
+      "c": 8,
+      "r_major": [ [ 0, [ 0 ] ], [ 1, [ 6 ] ] ],
+      "c_major": [ [ 0, [ 0 ] ], [ 6, [ 1 ] ] ]
+    },
+    "rs": { "r": 2, "c": 0, "r_major": [], "c_major": [] },
+    "nn": {
+      "r": 8,
+      "c": 8,
+      "r_major": [ [ 0, [ 5, 4, 3, 2, 1 ] ], [ 6, [ 7 ] ] ],
+      "c_major": [
+        [ 1, [ 0 ] ],
+        [ 2, [ 0 ] ],
+        [ 3, [ 0 ] ],
+        [ 4, [ 0 ] ],
+        [ 5, [ 0 ] ],
+        [ 7, [ 6 ] ]
+      ]
+    },
+    "ns": { "r": 8, "c": 0, "r_major": [], "c_major": [] },
+    "trans": null
+  },
+  "link_graph": [],
+  "nodes": {
+    "ctrl": [
+      [ 0, { "ctrl_name": "Place", "ctrl_params": [], "ctrl_arity": 0 } ],
+      [ 1, { "ctrl_name": "Wolf", "ctrl_params": [], "ctrl_arity": 0 } ],
+      [ 2, { "ctrl_name": "Cabbage", "ctrl_params": [], "ctrl_arity": 0 } ],
+      [ 3, { "ctrl_name": "Goat", "ctrl_params": [], "ctrl_arity": 0 } ],
+      [ 4, { "ctrl_name": "Shepherd", "ctrl_params": [], "ctrl_arity": 0 } ],
+      [ 5, { "ctrl_name": "Left", "ctrl_params": [], "ctrl_arity": 0 } ],
+      [ 6, { "ctrl_name": "Place", "ctrl_params": [], "ctrl_arity": 0 } ],
+      [ 7, { "ctrl_name": "Right", "ctrl_params": [], "ctrl_arity": 0 } ]
+    ],
+    "sort": [
+      [ "Cabbage", [ 2 ] ],
+      [ "Goat", [ 3 ] ],
+      [ "Left", [ 5 ] ],
+      [ "Place", [ 6, 0 ] ],
+      [ "Right", [ 7 ] ],
+      [ "Shepherd", [ 4 ] ],
+      [ "Wolf", [ 1 ] ]
+    ],
+    "size": 8
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "brs_name": "login",
+  "brs_lhs": {
+    "place_graph": {
+      "num_regions": 1,
+      "num_nodes": 3,
+      "num_sites": 1,
+      "rn": {
+        "r": 1,
+        "c": 3,
+        "r_major": [ [ 0, [ 1, 0 ] ] ],
+        "c_major": [ [ 0, [ 0 ] ], [ 1, [ 0 ] ] ]
+      },
+      "rs": { "r": 1, "c": 1, "r_major": [], "c_major": [] },
+      "nn": {
+        "r": 3,
+        "c": 3,
+        "r_major": [ [ 1, [ 2 ] ] ],
+        "c_major": [ [ 2, [ 1 ] ] ]
+      },
+      "ns": {
+        "r": 3,
+        "c": 1,
+        "r_major": [ [ 1, [ 0 ] ] ],
+        "c_major": [ [ 0, [ 1 ] ] ]
+      },
+      "trans": null
+    },
+    "link_graph": [],
+    "nodes": {
+      "ctrl": [
+        [ 0, { "ctrl_name": "Person", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 1, { "ctrl_name": "Vault", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 2, { "ctrl_name": "LoginT", "ctrl_params": [], "ctrl_arity": 0 } ]
+      ],
+      "sort": [
+        [ "LoginT", [ 2 ] ], [ "Person", [ 0 ] ], [ "Vault", [ 1 ] ]
+      ],
+      "size": 3
+    }
+  },
+  "brs_rhs": {
+    "place_graph": {
+      "num_regions": 1,
+      "num_nodes": 3,
+      "num_sites": 1,
+      "rn": {
+        "r": 1,
+        "c": 3,
+        "r_major": [ [ 0, [ 2, 0 ] ] ],
+        "c_major": [ [ 0, [ 0 ] ], [ 2, [ 0 ] ] ]
+      },
+      "rs": { "r": 1, "c": 1, "r_major": [], "c_major": [] },
+      "nn": {
+        "r": 3,
+        "c": 3,
+        "r_major": [ [ 0, [ 1 ] ] ],
+        "c_major": [ [ 1, [ 0 ] ] ]
+      },
+      "ns": {
+        "r": 3,
+        "c": 1,
+        "r_major": [ [ 2, [ 0 ] ] ],
+        "c_major": [ [ 0, [ 2 ] ] ]
+      },
+      "trans": null
+    },
+    "link_graph": [],
+    "nodes": {
+      "ctrl": [
+        [ 0, { "ctrl_name": "Person", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 1, { "ctrl_name": "LoginT", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 2, { "ctrl_name": "Vault", "ctrl_params": [], "ctrl_arity": 0 } ]
+      ],
+      "sort": [
+        [ "LoginT", [ 1 ] ], [ "Person", [ 0 ] ], [ "Vault", [ 2 ] ]
+      ],
+      "size": 3
+    }
+  },
+  "brs_eta": null,
+  "conds": []
+}

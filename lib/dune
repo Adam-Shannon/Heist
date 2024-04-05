@@ -1,0 +1,8 @@
+(library
+ (name Heist)
+ (wrapped false)
+ (public_name Heist)
+ (modules Eval ast)
+ (libraries base cmdliner bigraph yojson ppx_deriving_yojson.runtime)
+ (preprocess (pps ppx_deriving_yojson))
+ )

@@ -1,0 +1,101 @@
+{
+  "brs_name": "leave_area",
+  "brs_lhs": {
+    "place_graph": {
+      "num_regions": 1,
+      "num_nodes": 4,
+      "num_sites": 2,
+      "rn": {
+        "r": 1,
+        "c": 4,
+        "r_major": [ [ 0, [ 3, 0 ] ] ],
+        "c_major": [ [ 0, [ 0 ] ], [ 3, [ 0 ] ] ]
+      },
+      "rs": { "r": 1, "c": 2, "r_major": [], "c_major": [] },
+      "nn": {
+        "r": 4,
+        "c": 4,
+        "r_major": [ [ 0, [ 2, 1 ] ] ],
+        "c_major": [ [ 1, [ 0 ] ], [ 2, [ 0 ] ] ]
+      },
+      "ns": {
+        "r": 4,
+        "c": 2,
+        "r_major": [ [ 0, [ 0 ] ], [ 3, [ 1 ] ] ],
+        "c_major": [ [ 0, [ 0 ] ], [ 1, [ 3 ] ] ]
+      },
+      "trans": null
+    },
+    "link_graph": [
+      { "inner": [], "outer": [], "ports": [ [ 1, 1 ], [ 2, 1 ] ] },
+      { "inner": [], "outer": [ [ "Name", "b" ] ], "ports": [ [ 1, 1 ] ] },
+      { "inner": [], "outer": [ [ "Name", "c" ] ], "ports": [ [ 1, 1 ] ] },
+      { "inner": [], "outer": [ [ "Name", "d" ] ], "ports": [ [ 1, 1 ] ] },
+      { "inner": [], "outer": [ [ "Name", "e" ] ], "ports": [ [ 1, 1 ] ] }
+    ],
+    "nodes": {
+      "ctrl": [
+        [ 0, { "ctrl_name": "Floor", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 1, { "ctrl_name": "Router", "ctrl_params": [], "ctrl_arity": 5 } ],
+        [ 2, { "ctrl_name": "Phone", "ctrl_params": [], "ctrl_arity": 1 } ],
+        [ 3, { "ctrl_name": "Floor", "ctrl_params": [], "ctrl_arity": 0 } ]
+      ],
+      "sort": [
+        [ "Floor", [ 3, 0 ] ], [ "Phone", [ 2 ] ], [ "Router", [ 1 ] ]
+      ],
+      "size": 4
+    }
+  },
+  "brs_rhs": {
+    "place_graph": {
+      "num_regions": 1,
+      "num_nodes": 4,
+      "num_sites": 2,
+      "rn": {
+        "r": 1,
+        "c": 4,
+        "r_major": [ [ 0, [ 2, 0 ] ] ],
+        "c_major": [ [ 0, [ 0 ] ], [ 2, [ 0 ] ] ]
+      },
+      "rs": { "r": 1, "c": 2, "r_major": [], "c_major": [] },
+      "nn": {
+        "r": 4,
+        "c": 4,
+        "r_major": [ [ 0, [ 1 ] ], [ 2, [ 3 ] ] ],
+        "c_major": [ [ 1, [ 0 ] ], [ 3, [ 2 ] ] ]
+      },
+      "ns": {
+        "r": 4,
+        "c": 2,
+        "r_major": [ [ 0, [ 0 ] ], [ 2, [ 1 ] ] ],
+        "c_major": [ [ 0, [ 0 ] ], [ 1, [ 2 ] ] ]
+      },
+      "trans": null
+    },
+    "link_graph": [
+      { "inner": [], "outer": [], "ports": [ [ 1, 1 ] ] },
+      {
+        "inner": [],
+        "outer": [ [ "Name", "b" ] ],
+        "ports": [ [ 1, 1 ], [ 3, 1 ] ]
+      },
+      { "inner": [], "outer": [ [ "Name", "c" ] ], "ports": [ [ 1, 1 ] ] },
+      { "inner": [], "outer": [ [ "Name", "d" ] ], "ports": [ [ 1, 1 ] ] },
+      { "inner": [], "outer": [ [ "Name", "e" ] ], "ports": [ [ 1, 1 ] ] }
+    ],
+    "nodes": {
+      "ctrl": [
+        [ 0, { "ctrl_name": "Floor", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 1, { "ctrl_name": "Router", "ctrl_params": [], "ctrl_arity": 5 } ],
+        [ 2, { "ctrl_name": "Floor", "ctrl_params": [], "ctrl_arity": 0 } ],
+        [ 3, { "ctrl_name": "Phone", "ctrl_params": [], "ctrl_arity": 1 } ]
+      ],
+      "sort": [
+        [ "Floor", [ 2, 0 ] ], [ "Phone", [ 3 ] ], [ "Router", [ 1 ] ]
+      ],
+      "size": 4
+    }
+  },
+  "brs_eta": null,
+  "conds": []
+}
