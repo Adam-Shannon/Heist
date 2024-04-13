@@ -14,8 +14,12 @@ type strategy_def = (Ast.strategy_expr);;
 (** Applicable type separating mutating actions from strategies *)
 type applicable =  Rule of Execute.react | CondRule of Execute.react | Strat of strategy_def | None;;
 
-(** type of the global strategy lookup table*)
-type global_strats = (string * applicable) list
+(** Definition type for BG and Rules w/ algebra *)
+type definition = RDef of string 
+
+(** type of the global environment lookup table*)
+type global = Def of definition | App of applicable
+type global_strats = (string * global) list
 
 (** type of the Bigraph being acted on by strategies - Some bigraph.t 
 indicates a successfull application and None is failure *)
@@ -69,13 +73,13 @@ are ignored and only defintions and strategies are used to build the global look
 let parse( (strats, b): state) = function
   | Ast.Def a -> 
     let (id, new_rule) = parseRule a in 
-      let updated_applic_list = (id, new_rule)::(strats) in 
+      let updated_applic_list = (id, App new_rule)::(strats) in 
         (updated_applic_list, b );
   | Ast.Strategy (id,body) ->(
       try
         let _ = List.assoc id strats in
           failwith "Strategy already exists"
-      with Not_found -> ((id,Strat body)::strats, b))
+      with Not_found -> ((id,App (Strat body))::strats, b))
   | Ast.Application id ->
   try 
       let _ = List.assoc id strats in  
@@ -98,10 +102,19 @@ let execute_cond_rule (r:Execute.react) (b:state_bigraph)  =  match b with
   | Some b_ok -> print_string "applying conditional rule instance \n";Execute.apply b_ok [r] 
   | None -> None   
 
+(** filter - get Apps for eval env*)
+let rec filter_apps (g:global_strats) =
+  match g with
+    | [] -> []
+    | x::xs -> 
+      match x with
+        | (id,App a) -> (id,a)::(filter_apps xs)
+        | (_,Def _) -> filter_apps xs
+
 (** lookup a strategy with a name in the global list of type
 global_strats *)
 let lookup id (globs:global_strats) =
-    let to_apply = List.assoc_opt id globs in
+    let to_apply = List.assoc_opt id (filter_apps globs) in
       match to_apply with
         | Some body -> body
         | None -> failwith "Strategy doenst exist"
@@ -217,7 +230,7 @@ let evaluate( (strats, b): state) = function
       (strats, b);
   | Ast.Application id ->
       print_string "evaluate a strategy application (top-level) \n";
-        let lookup = List.assoc_opt id strats in 
+        let lookup = List.assoc_opt id (filter_apps strats) in 
           match lookup with
             | None -> failwith "Strategy called doesn't exist"
             | Some strat_todo -> 

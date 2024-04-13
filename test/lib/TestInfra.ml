@@ -21,7 +21,8 @@ let parse_test_rules path = Eval.rule_from_json path
 let create_rule_strat path filename = 
   let rname = List.hd (String.split_on_char '.' filename) in
     let rule_in = Eval.rule_from_json (String.cat path filename) in
-      (rname, Rule rule_in) 
+      (rname, App (Rule rule_in)) 
+        
 
 (** Unsafe - attempts to pass all files in Dir as rules => testfiles/rules/*.json should be used *)
 let rules_from_dir path = Sys.readdir path |> Array.to_list |> List.map( create_rule_strat path )
