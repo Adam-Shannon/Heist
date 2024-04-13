@@ -1,0 +1,18 @@
+let first_rule = [test/Bigraphfiles/CommsCameraID.json];;
+let second_rule = [test/Bigraphfiles/CommsFail.json];;
+letcond third_rule = [test/Bigraphfiles/CommsCameraID.json]appcond( (! in + using [test/Bigraphfiles/comms.json]),(! in - using [test/Bigraphfiles/comms.json]) );;
+
+strat example_strategy := { first_rule; first_rule; first_rule } ;;
+strat example_strategy_two := { first_rule; example_strategy; first_rule } ;;
+strat example_strategy_three := { if(first_rule)then(example_strategy)else(example_strategy_two) ; first_rule };;
+strat example_strategy_four := { while(first_rule) ; second_rule };;
+strat example_strategy_five := { (example_strategy_two ? third_rule) ; first_rule } ;;
+strat example_strategy_six := { any(first_rule, second_rule, example_strategy_two, example_strategy_two) ; first_rule };;
+strat example_strategy_seven := { upto( 2 )use(first_rule) };;
+
+
+# ./heist.exe test/test.heat test/Bigraphfiles/comms.json
+do first_rule;;
+do third_rule;;
+do example_strategy_five;;
+do example_strategy_seven;;
