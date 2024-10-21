@@ -2,6 +2,10 @@
 
 Heist is a programming language for Bigraphs implented in a interpreter in ```Heist/bin``` with dependent backend library ```Heist/lib``` which implements the languages backend evaulation constructs independently. Also provided in ```Heist/test/lib``` is a second miniature library with simple functionality allowing users to unit test their own code written in Heist, sample programs written in Heist (```Heist/test/Heat```) and equivalent *BigraphER* representations (```Heist/test/BigrapherTemplates```) are provided including **JSON** implementations of all the necessary Bigraphs and reaction rules in (```Heist/test/Bigrapherfiles```).
 
+## Additional Information
+This project was originally created as an undergraduate dissertation available here at [Bigraph Strategies](https://github.com/Adam-Shannon/Heist/blob/662ff51d14146e9678c0ef3719092a5cff59ea77/BigraphStrategies.pdf) which contains significant work on a theoretical description of the language using small step operational semantics along with design ideation and justifying use cases, the dissertation may also serve as a good starting point for those interested in the theory of Bigraphs but could become out of date as Heist evolves and is kept within this repo mostly for archival context.
+
+For any questions about Heist feel free to contact adam.shannon02@gmail.com , I am currently not working full time on Bigraphs/Heist but intend to maintain the language in my spare time with occasional additions on request.
 
 ## Build instructions
 
